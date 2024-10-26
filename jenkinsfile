@@ -19,6 +19,7 @@ throw e
 finally{
 slackNotifications(currentBuild.resul)
 }
+}//node closing
 
 def slackNotifications(String buildStatus = 'STARTED') {
   // build status of null means successful
@@ -42,4 +43,4 @@ def slackNotifications(String buildStatus = 'STARTED') {
 // Send notifications
   slackSend (color: colorCode, message: summary)
 }
-}
+
